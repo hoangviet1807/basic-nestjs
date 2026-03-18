@@ -10,6 +10,5 @@ export class AiController {
     return this.aiService.recommendDrink(lat, lon);
   }
 
-  @Get('chat')
-  
+  // @Get('chat')
 }
