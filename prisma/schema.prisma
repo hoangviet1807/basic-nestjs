@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model drinks {
+  id                 String    @id @db.Uuid
+  name               String    @db.VarChar(100)
+  description        String?
+  price              Int?
+  image_url          String?
+  temperature_type   String?   @db.VarChar(20)
+  recommendation_tag String?   @db.VarChar(50)
+  created_at         DateTime? @default(now()) @db.Timestamp(6)
+}

@@ -12,6 +12,10 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  app.enableCors({
+    origin: 'http://localhost:3001',
+    credentials: true,
+  });
 
   const config = new DocumentBuilder()
     .setTitle('Cats example')
